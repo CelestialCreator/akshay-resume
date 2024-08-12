@@ -10,7 +10,7 @@ const skillProficiencies = {
     "Docker": 5,
     "Kubernetes": 4,
     "Helm": 5,
-    "containerd": 5,
+    "containerd": 4,
     "Keda": 3,
     "Karpenter": 4,
     "Istio": 4,
