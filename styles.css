@@ -72,6 +72,19 @@ a:hover {
     border-radius: 5px;
 }
 
+.skill-stars {
+    color: #ffd700;  /* Gold color for stars */
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.skill-legend {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #666;
+}
+
 .project {
     background-color: #f3f3f3;
     padding: 15px;

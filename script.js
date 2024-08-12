@@ -1,3 +1,44 @@
+//object map
+const skillProficiencies = {
+    "AWS": 4,
+    "GCP": 4,
+    "Azure": 3,
+    "Terraform": 4,
+    "Terragrunt": 3,
+    "Crossplane": 3,
+    "Vagrant": 3,
+    "Docker": 5,
+    "Kubernetes": 4,
+    "Helm": 4,
+    "containerd": 3,
+    "Keda": 3,
+    "Karpenter": 3,
+    "Istio": 3,
+    "Linkerd": 3,
+    "Emissary Ingress": 4,
+    "NGINX Ingress": 4,
+    "KrakenD": 3,
+    "Trivy": 3,
+    "Terrascan": 3,
+    "Jenkins": 4,
+    "GitLab": 4,
+    "ArgoCD": 4,
+    "Cloud Build": 4,
+    "GitHub Actions": 3,
+    "Prometheus": 4,
+    "Grafana": 4,
+    "Datadog": 3,
+    "RabbitMQ": 3,
+    "Elasticsearch": 2,
+    "Redis": 3,
+    "Linux": 4,
+    "Windows": 4,
+    "Bash": 4,
+    "Python": 2,
+    "Git": 4,
+    "KubeGreen": 3
+};
+
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -11,7 +52,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Skill proficiency visualizer
 const skills = document.querySelectorAll('.skill-category li');
 skills.forEach(skill => {
-    const proficiency = Math.floor(Math.random() * 5) + 1; // Random proficiency for demo
+    const skillName = skill.textContent.trim().split(',')[0];  // Get the first skill if multiple are listed
+    const proficiency = skillProficiencies[skillName] || 0;  // Default to 0 if not found
     const stars = '★'.repeat(proficiency) + '☆'.repeat(5 - proficiency);
     skill.innerHTML += ` <span class="skill-stars">${stars}</span>`;
 });
