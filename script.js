@@ -8,7 +8,7 @@ const skillProficiencies = {
     "Crossplane": 3,
     "Vagrant": 5,
     "Docker": 5,
-    "Kubernetes": 4,
+    "Kubernetes (GKE, EKS)": 4,
     "Helm": 5,
     "containerd": 5,
     "Keda": 3,
