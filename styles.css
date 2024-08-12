@@ -130,3 +130,36 @@ a:hover {
 .education-section ul li {
     margin-bottom: 10px;
 }
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h3 {
+    color: #6aa84f;
+    border-bottom-color: #6aa84f;
+}
+
+.dark-mode h4 {
+    color: #4a86e8;
+}
+
+.dark-mode .skill-category,
+.dark-mode .education-section {
+    background-color: #555;
+}
+
+.dark-mode .project,
+.dark-mode .job {
+    background-color: #666;
+}
+
+.dark-mode a {
+    color: #6aa84f;
+}
