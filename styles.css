@@ -176,3 +176,70 @@ a:hover {
 .dark-mode a {
     color: #6aa84f;
 }
+
+@media print {
+    body {
+        font-size: 11pt;
+        line-height: 1.3;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    h3 {
+        font-size: 16pt;
+        page-break-after: avoid;
+    }
+
+    h4 {
+        font-size: 14pt;
+        page-break-after: avoid;
+    }
+
+    p, ul, ol {
+        margin-bottom: 5px;
+    }
+
+    .skills-grid {
+        display: block;
+    }
+
+    .skill-category {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+    }
+
+    .project, .job, .education-section {
+        page-break-inside: avoid;
+    }
+
+    .icon, .company-logo {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    #skills, #projects, #experience, #education {
+        page-break-before: always;
+    }
+}
