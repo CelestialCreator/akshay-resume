@@ -16,7 +16,7 @@
                 <a href="https://www.linkedin.com/in/akshay-mhaskar-30a003160" target="_blank">
                     <img src="images/linkedin_logo.png" alt="LinkedIn" class="icon">
                 </a>
-                <a href="https://github.com/yourusername" target="_blank">
+                <a href="https://github.com/CelestialCreator" target="_blank">
                     <img src="images/github_logo.png" alt="GitHub" class="icon">
                 </a>
             </p>
@@ -29,36 +29,53 @@
 
         <section id="skills">
             <h3>Technical Expertise</h3>
+            <div class="skill-legend">
+                <p>Skill Proficiency: ★☆☆☆☆ Beginner | ★★☆☆☆ Elementary | ★★★☆☆ Intermediate | ★★★★☆ Advanced | ★★★★★ Expert</p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h4>Cloud & Infrastructure</h4>
                     <ul>
-                        <li>AWS, GCP, Azure</li>
-                        <li>Terraform, Terragrunt</li>
-                        <li>Crossplane, Vagrant</li>
+                        <li>AWS</li>
+                        <li>GCP</li>
+                        <li>Azure</li>
+                        <li>Terraform</li>
+                        <li>Terragrunt</li>
+                        <li>Crossplane</li>
+                        <li>Vagrant</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>Containerization</h4>
                     <ul>
-                        <li>Docker, Kubernetes (GKE, EKS)</li>
-                        <li>Helm, containerd</li>
-                        <li>Keda, Karpenter</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Helm</li>
+                        <li>containerd</li>
+                        <li>Keda</li>
+                        <li>Karpenter</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>Networking & Security</h4>
                     <ul>
-                        <li>Istio, Linkerd</li>
-                        <li>Emissary Ingress, NGINX Ingress</li>
-                        <li>KrakenD, Trivy, Terrascan</li>
+                        <li>Istio</li>
+                        <li>Linkerd</li>
+                        <li>Emissary Ingress</li>
+                        <li>NGINX Ingress</li>
+                        <li>KrakenD</li>
+                        <li>Trivy</li>
+                        <li>Terrascan</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>CI/CD & Monitoring</h4>
                     <ul>
-                        <li>Jenkins, GitLab, ArgoCD</li>
-                        <li>Cloud Build, GitHub Actions</li>
+                        <li>Jenkins</li>
+                        <li>ArgoCD</li>
+                        <li>GitLab</li>
+                        <li>Cloud Build</li>
+                        <li>GitHub Actions</li>
                         <li>Prometheus, Grafana, Datadog</li>
                     </ul>
                 </div>
@@ -66,16 +83,19 @@
                     <h4>Databases & Messaging</h4>
                     <ul>
                         <li>RabbitMQ</li>
-                        <li>Elasticsearch (basic)</li>
+                        <li>Elasticsearch</li>
                         <li>Redis</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h4>Other Skills</h4>
                     <ul>
-                        <li>Linux, Windows</li>
-                        <li>Bash, Python (basic)</li>
-                        <li>Git, KubeGreen</li>
+                        <li>Windows</li>
+                        <li>Linux</li>
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>KubeGreen</li>
+                        <li>Git</li>
                     </ul>
                 </div>
             </div>
@@ -84,16 +104,47 @@
         <section id="projects">
             <h3>Featured Projects</h3>
             <div class="project">
-                <h4>Stashfin Cloud Migration</h4>
-                <p><em>Current Ongoing Project | Collaboration with Searce</em></p>
+                <h4>DevOps/Tech Lead – XSquare Payment Services LLC</h4>
+                <p><em>Nov 2024 - Present</em></p>
+                <h5>Project Overview:</h5>
+                <p>Led the rearchitecture of an AWS-based infrastructure to achieve full PCI DSS compliance, segregating sensitive card data (Card Data Zone) from non-sensitive operations (No Card Data Zone).</p>
+                
+                <h5>Key Accomplishments & Measurable Outcomes:</h5>
                 <ul>
-                    <li>Leading AWS to GCP migration for a co-lending platform</li>
-                    <li>Upgraded EKS clusters from 1.25 to 1.28</li>
-                    <li>Implemented Helm for deployments</li>
-                    <li>Introduced Emissary API Gateway and Linkerd service mesh</li>
-                    <li>Improved infrastructure with HA Redis, node/pod affinity, and PDB</li>
+                    <li>Infrastructure Restructuring: Implemented multi-tier, segmented architecture using AWS CloudFormation and native services (NAT Gateways, RDS PostgreSQL, VPC Security Groups) for strict access controls.</li>
+                    <li>Security Enhancements: Integrated advanced monitoring and compliance tools (CloudWatch, GuardDuty, Security Hub, AWS Shield Advanced, KMS) for real-time audit logging and threat detection.</li>
+                    <li>Vulnerability Management: Bridged capability gaps with open-source tools like Wazzu for enhanced vulnerability management and security posture.</li>
+                    <li>Data Protection: Established secure API communication channels with end-to-end encryption (in transit and at rest) to protect sensitive payment information.</li>
+                    <li>PCI DSS Compliance: Collaborated cross-functionally to ensure seamless integration with payment gateways and adherence to PCI DSS standards, significantly reducing risk exposure.</li>
                 </ul>
-                <p><strong>Technologies:</strong> AWS, GCP, Kubernetes (EKS), Helm, Bitbucket, Emissary, Linkerd, Redis, nginx ingress, Gitlab</p>
+                
+                <h5>Technologies:</h5>
+                <p>AWS CloudFormation, NAT Gateways, RDS PostgreSQL, VPC Security Groups, CloudWatch, GuardDuty, Security Hub, AWS Shield Advanced, KMS, Wazzu</p>
+                
+                <!-- <h5>Summary:</h5> -->
+                <!-- <p>This project achieved full PCI DSS compliance for payment infrastructure, ensuring robust security and risk mitigation while maintaining operational efficiency.</p> -->
+            </div>
+            <div class="project">
+                <h4>Stashfin Cloud Migration</h4>
+                <p><em>Mar 2023 - Nov 2023</em></p>
+                <h5>Project Overview:</h5>
+                <p>Completed the migration of a co-lending platform’s infrastructure from AWS to GCP. As a Platform Engineer, I led the migration effort to help the client achieve a cloud-agnostic infrastructure, streamline deployments, and enhance performance—all with quantifiable improvements.</p>
+                
+                <h5>Key Accomplishments & Measurable Outcomes:</h5>
+                <ul>
+                    <li>Infrastructure Migration: Successfully transitioned from AWS to GCP, reducing overall infrastructure downtime by 80% during the migration phase.</li>
+                    <li>CI/CD Pipeline Enhancements: Implemented an automated CI/CD pipeline that cut the build and deployment time by 70% (e.g., reducing average deployment time from 40 minutes to 12 minutes), allowing for more frequent releases.</li>
+                    <li>Meta-Service Chart Introduction: Developed a single Helm-based meta-service chart to deploy all microservices, which decreased manual configuration efforts by 50% and reduced deployment-related errors by 40%.</li>
+                    <li>Service Mesh & API Gateway: Deployed Linkerd 2.0 as the service mesh and Emissary as the API gateway, resulting in a 30% improvement in inter-service communication performance and a measurable reduction in API latency.</li>
+                    <li>Observability and Resiliency: Integrated Prometheus and Grafana for monitoring, and optimized infrastructure with HA Redis, node/pod affinity, and Pod Disruption Budgets (PDB), achieving 99.95% uptime in production and reducing recovery time by 60%.</li>
+                    <li>Security and Cost Optimization: Enforced least privilege permissions and automated CI/CD processes, leading to a 25% reduction in operational costs over the project lifecycle.</li>
+                </ul>
+                
+                <h5>Technologies:</h5>
+                <p>AWS, GCP, Kubernetes (EKS), Helm, Bitbucket, GitLab, Emissary, Linkerd 2.0, Redis, nginx ingress, Prometheus, Grafana</p>
+                
+                <h5>Summary:</h5>
+                <p>This project not only achieved a seamless migration from AWS to GCP but also delivered significant measurable benefits—faster deployments, enhanced performance, improved reliability, and reduced costs. These quantifiable outcomes underscore the value of the migration and the efficiency improvements implemented throughout the process.</p>
             </div>
             <div class="project">
                 <h4>Xuno Cross-Border Banking Infrastructure</h4>
@@ -195,5 +246,6 @@
             </div>
         </section>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
