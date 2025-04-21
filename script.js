@@ -52,6 +52,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Skill proficiency visualizer
 const skills = document.querySelectorAll('.skill-category li');
 skills.forEach(skill => {
+    // Skip if the skill already has stars
+    if (skill.querySelector('.skill-stars')) {
+        return;
+    }
+    
     const skillName = skill.textContent.trim().split(',')[0];  // Get the first skill if multiple are listed
     const proficiency = skillProficiencies[skillName] || 0;  // Default to 0 if not found
     const stars = '★'.repeat(proficiency) + '☆'.repeat(5 - proficiency);
@@ -104,4 +109,36 @@ window.addEventListener('scroll', () => {
 
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Add PDF export button
+const pdfExportButton = document.createElement('button');
+pdfExportButton.innerHTML = '📄 Save as PDF';
+pdfExportButton.className = 'pdf-export-button';
+document.body.appendChild(pdfExportButton);
+
+pdfExportButton.addEventListener('click', () => {
+    // Store current mode
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    // Always switch to light mode for PDF printing
+    if (isDarkMode) {
+        document.body.classList.remove('dark-mode');
+    }
+    
+    // Add the PDF printing class
+    document.body.classList.add('pdf-printing');
+    
+    // Delay to allow styles to apply
+    setTimeout(() => {
+        window.print();
+        
+        // Remove the PDF printing class and restore mode after printing
+        setTimeout(() => {
+            document.body.classList.remove('pdf-printing');
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        }, 500);
+    }, 300);
 });

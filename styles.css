@@ -121,29 +121,310 @@ a:hover {
 
 @media print {
     body {
+        font-size: 10pt;
+        line-height: 1.3;
+        background-color: white;
+        color: black;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-shadow: none;
         background-color: white;
     }
+
+    header {
+        padding: 10px;
+        margin-bottom: 15px;
+        break-inside: avoid;
+        background: white !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    header h1 {
+        color: #333;
+        font-size: 18pt;
+        margin-bottom: 5px;
+    }
+
+    header h2 {
+        color: #666;
+        font-size: 14pt;
+    }
+
+    h3 {
+        font-size: 14pt;
+        page-break-after: avoid;
+        break-after: avoid;
+        color: #333 !important;
+        border-bottom: 1px solid #333;
+    }
+
+    h4 {
+        font-size: 12pt;
+        page-break-after: avoid;
+        break-after: avoid;
+        color: #333 !important;
+    }
+
+    h5 {
+        font-size: 11pt;
+        margin-bottom: 3px;
+        margin-top: 8px;
+    }
+
+    p, ul, ol {
+        margin-bottom: 5px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 2px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .skill-category {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        background-color: white !important;
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+    }
+
+    .project, .job, .education-section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        background-color: white !important;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .icon, .company-logo {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .skill-stars {
+        color: black !important;
+    }
+
+    #skills, #projects, #experience, #education {
+        page-break-before: auto;
+    }
     
-    .container {
-        box-shadow: none;
+    #summary {
+        margin-bottom: 15px;
+    }
+
+    .skills-table {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .dark-mode {
+        background-color: white;
+        color: black;
+    }
+    
+    /* Hide buttons */
+    button {
+        display: none !important;
     }
 }
 
-.education-section ul li a {
-    color: #4a86e8;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.skills-table {
+    margin: 15px 0;
 }
 
-.education-section ul li a:hover {
-    color: #6aa84f;
-    text-decoration: underline;
+.skills-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #e6f2ff;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.education-section ul li {
-    margin-bottom: 10px;
+.skills-table th, .skills-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
 }
 
+.skills-table th {
+    background-color: #4a86e8;
+    color: white;
+    font-weight: bold;
+}
+
+.skills-table tr:hover {
+    background-color: #d9e9ff;
+}
+
+.skills-table tr:last-child td {
+    border-bottom: none;
+}
+
+.dark-mode .skills-table table {
+    background-color: #555;
+}
+
+.dark-mode .skills-table th {
+    background-color: #6aa84f;
+}
+
+.dark-mode .skills-table tr:hover {
+    background-color: #666;
+}
+
+@media print {
+    .skills-table th, .skills-table td {
+        padding: 5px 10px;
+    }
+    
+    .skills-table {
+        page-break-inside: avoid;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+/* PDF Export Helper */
+.pdf-export-button {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4a86e8;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pdf-export-button:hover {
+    background-color: #6aa84f;
+}
+
+@media print {
+    .pdf-export-button {
+        display: none !important;
+    }
+    
+    /* Additional print optimization */
+    @page {
+        size: A4;
+        margin: 0.5cm;
+    }
+    
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Ensure no content is cut off */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Force background colors to print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+
+/* PDF printing optimization class */
+body.pdf-printing {
+    background-color: white;
+}
+
+body.pdf-printing .container {
+    box-shadow: none;
+    max-width: 100%;
+    padding: 15px;
+}
+
+body.pdf-printing header {
+    background: linear-gradient(to right, #4a86e8, #6aa84f) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body.pdf-printing .skill-category {
+    background-color: #e6f2ff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body.pdf-printing .project {
+    background-color: #f3f3f3 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body.pdf-printing .job {
+    background-color: #f9f9f9 !important;
+    border-left: 5px solid #4a86e8 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body.pdf-printing .education-section {
+    background-color: #e6f2ff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+body.pdf-printing .skill-category,
+body.pdf-printing .project,
+body.pdf-printing .job,
+body.pdf-printing .education-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+body.pdf-printing .skill-stars {
+    color: #ffd700 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+/* Dark mode styles */
 .dark-mode {
     background-color: #333;
     color: #f0f0f0;
@@ -178,68 +459,4 @@ a:hover {
 }
 
 @media print {
-    body {
-        font-size: 11pt;
-        line-height: 1.3;
-    }
-
-    .container {
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-    }
-
-    header {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    h1 {
-        font-size: 24pt;
-    }
-
-    h2 {
-        font-size: 18pt;
-    }
-
-    h3 {
-        font-size: 16pt;
-        page-break-after: avoid;
-    }
-
-    h4 {
-        font-size: 14pt;
-        page-break-after: avoid;
-    }
-
-    p, ul, ol {
-        margin-bottom: 5px;
-    }
-
-    .skills-grid {
-        display: block;
-    }
-
-    .skill-category {
-        margin-bottom: 10px;
-        page-break-inside: avoid;
-    }
-
-    .project, .job, .education-section {
-        page-break-inside: avoid;
-    }
-
-    .icon, .company-logo {
-        display: none;
-    }
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    #skills, #projects, #experience, #education {
-        page-break-before: always;
-    }
 }
