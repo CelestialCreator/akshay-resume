@@ -1,287 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Structured Data for Resume Parsers -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Akshay Mhaskar",
+        "jobTitle": "Cloud & DevOps Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Billeasy"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+        },
+        "email": "mailto:mhaskarakshay1992@gmail.com",
+        "telephone": "+91 8898910723",
+        "url": "https://www.linkedin.com/in/akshay-mhaskar-30a003160",
+        "sameAs": [
+            "https://www.linkedin.com/in/akshay-mhaskar-30a003160",
+            "https://github.com/CelestialCreator"
+        ],
+        "skills": [
+            "AWS", "GCP", "Terraform", "Terragrunt", "CloudFront", "Linux",
+            "Docker", "Kubernetes", "Helm", "ArgoCD",
+            "Traefik", "Istio", "Trivy", "Terrascan", "PCI-DSS",
+            "VictoriaMetrics", "VictoriaLogs", "FluentBit", "Grafana", "AlertManager", "Zenduty",
+            "Jenkins", "Git", "CI/CD Pipelines",
+            "Python", "Shell", "Open-Source LLMs/TTS"
+        ]
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay Mhaskar - DevOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Akshay Mhaskar - Cloud & DevOps Engineer</title>
+    <meta name="description" content="Akshay Mhaskar - Cloud & DevOps Engineer with expertise in AWS, GCP, Kubernetes, Terraform, CI/CD, and GitOps. Currently working at Billeasy, previously at mavonic.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+        }
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .header-bg {
+            background-color: #2b3a55; /* Dark Blue */
+        }
+        .section-title {
+            border-left: 4px solid #14b8a6; /* Teal */
+            padding-left: 0.75rem;
+            color: #2b3a55;
+            font-weight: 700;
+        }
+        .job-title {
+            color: #14b8a6;
+            font-weight: 600;
+        }
+        .logo-img {
+            max-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+        /* Style for Print/PDF View */
+        @media print {
+            body { background-color: #fff !important; }
+            .resume-container { box-shadow: none !important; }
+            .print-hidden { display: none !important; }
+            .section-title { border-color: #000 !important; }
+            .job-title { color: #000 !important; }
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Akshay Mhaskar</h1>
-            <h2>Cloud & DevOps Engineer | AI/LLM Workflows | GCP, AWS, AZURE</h2>
-            <p>Mumbai, Maharashtra, India | mhaskarakshay1992@gmail.com | +91 8898910723 | 
-                <a href="https://www.linkedin.com/in/akshay-mhaskar-30a003160" target="_blank">
-                    <img src="images/linkedin_logo.png" alt="LinkedIn" class="icon">
-                </a>
-                <a href="https://github.com/CelestialCreator" target="_blank">
-                    <img src="images/github_logo.png" alt="GitHub" class="icon">
-                </a>
-            </p>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <!-- Action Button for PDF -->
+    <div class="print-hidden flex justify-center mb-6">
+        <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+            Download/Print PDF
+        </button>
+    </div>
+
+    <!-- Main Resume Container -->
+    <div class="resume-container rounded-lg">
+
+        <!-- Header Section -->
+        <header class="header-bg p-6 text-white rounded-t-lg flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+            <div class="flex-shrink-0">
+                <!-- User Photo: Updated to use the new file ID -->
+                <img src="images/Passport Size Photo.jpeg"
+                     onerror="this.onerror=null;this.src='https://placehold.co/120x120/14b8a6/fff?text=AM';"
+                     alt="Akshay Mhaskar"
+                     class="w-24 h-24 rounded-full border-4 border-white object-cover">
+            </div>
+            <div class="text-center sm:text-left">
+                <h1 class="text-4xl font-bold tracking-wider">Akshay Mhaskar</h1>
+                <h2 class="text-xl font-medium mt-1 text-teal-300">Cloud & DevOps Engineer</h2>
+                <p class="text-sm mt-2 max-w-lg">Experienced DevOps Engineer with deep expertise in AWS, GCP, Linux systems, and cloud-native architectures. Proven success in optimizing infrastructure for performance, security, and cost-efficiency. Strong background in automation, CI/CD pipelines, and system reliability across distributed environments. Specializing in PCI-DSS compliance and secure cloud migrations for NBFC co-lending platforms.</p>
+            </div>
         </header>
 
-        <section id="summary">
-            <h3>Summary</h3>
-            <p>Experienced DevOps Engineer with deep expertise in AWS, GCP, Linux systems, and cloud-native architectures. Proven success in optimizing infrastructure for performance, security, and cost-efficiency. Strong background in automation, CI/CD pipelines, and system reliability across distributed environments. Adept at implementing AI-driven solutions including intelligent monitoring, agentic automation workflows, and Model Context Protocol (MCP). Committed to continuous improvement and exploring new paradigms in AI-driven automation, scalable infrastructure, and cross-functional engineering collaboration.</p>
-        </section>
+        <!-- Main Content Area -->
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6">
 
-        <section id="skills">
-            <h3>Technical Expertise</h3>
-            <div class="skill-legend">
-                <p>Skill Proficiency: <span class="skill-stars">★☆☆☆☆</span> Beginner | <span class="skill-stars">★★☆☆☆</span> Elementary | <span class="skill-stars">★★★☆☆</span> Intermediate | <span class="skill-stars">★★★★☆</span> Advanced | <span class="skill-stars">★★★★★</span> Expert</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Cloud & Infrastructure</h4>
-                    <ul>
-                        <li>AWS <span class="skill-stars">★★★★☆</span></li>
-                        <li>GCP <span class="skill-stars">★★★★★</span></li>
-                        <li>Azure <span class="skill-stars">★★★☆☆</span></li>
-                        <li>Terraform <span class="skill-stars">★★★★★</span></li>
-                        <li>Terragrunt <span class="skill-stars">★★★★★</span></li>
-                        <li>Crossplane <span class="skill-stars">★★★☆☆</span></li>
-                        <li>Vagrant <span class="skill-stars">★★★★★</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Containerization</h4>
-                    <ul>
-                        <li>Docker <span class="skill-stars">★★★★★</span></li>
-                        <li>Kubernetes <span class="skill-stars">★★★★☆</span></li>
-                        <li>Helm <span class="skill-stars">★★★★★</span></li>
-                        <li>containerd <span class="skill-stars">★★★★☆</span></li>
-                        <li>Keda <span class="skill-stars">★★★☆☆</span></li>
-                        <li>Karpenter <span class="skill-stars">★★★★☆</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Networking & Security</h4>
-                    <ul>
-                        <li>Istio <span class="skill-stars">★★★★☆</span></li>
-                        <li>Linkerd <span class="skill-stars">★★★★☆</span></li>
-                        <li>Emissary Ingress <span class="skill-stars">★★★★★</span></li>
-                        <li>NGINX Ingress <span class="skill-stars">★★★★☆</span></li>
-                        <li>KrakenD <span class="skill-stars">★★★☆☆</span></li>
-                        <li>Trivy <span class="skill-stars">★★★★★</span></li>
-                        <li>Terrascan <span class="skill-stars">★★★★★</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>CI/CD & Monitoring</h4>
-                    <ul>
-                        <li>Jenkins <span class="skill-stars">★★★★☆</span></li>
-                        <li>ArgoCD <span class="skill-stars">★★★★★</span></li>
-                        <li>GitLab <span class="skill-stars">★★★★☆</span></li>
-                        <li>Cloud Build <span class="skill-stars">★★★★★</span></li>
-                        <li>GitHub Actions <span class="skill-stars">★★★★★</span></li>
-                        <li>Prometheus, Grafana, Datadog <span class="skill-stars">★★★★☆</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Databases & Messaging</h4>
-                    <ul>
-                        <li>RabbitMQ <span class="skill-stars">★★★☆☆</span></li>
-                        <li>Elasticsearch <span class="skill-stars">★★☆☆☆</span></li>
-                        <li>Redis <span class="skill-stars">★★★★☆</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>AI & Agentic Tooling</h4>
-                    <ul>
-                        <li>Browser-Use <span class="skill-stars">★★★★☆</span></li>
-                        <li>n8n <span class="skill-stars">★★★★☆</span></li>
-                        <li>Flowise <span class="skill-stars">★★★★☆</span></li>
-                        <li>Playwright MCP <span class="skill-stars">★★★★☆</span></li>
-                        <li>MCP <span class="skill-stars">★★★☆☆</span></li>
-                        <li>LLM Integration <span class="skill-stars">★★★☆☆</span></li>
-                        <li>LangGraph <span class="skill-stars">★★☆☆☆</span></li>
-                        <li>Pydantic (Tool schemas) <span class="skill-stars">★★☆☆☆</span></li>
-                        <li>Mastra AI <span class="skill-stars">★★★☆☆</span></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Other Skills</h4>
-                    <ul>
-                        <li>Windows <span class="skill-stars">★★★★☆</span></li>
-                        <li>Linux <span class="skill-stars">★★★★☆</span></li>
-                        <li>Python <span class="skill-stars">★★☆☆☆</span></li>
-                        <li>Bash <span class="skill-stars">★★★☆☆</span></li>
-                        <li>KubeGreen <span class="skill-stars">★★★★★</span></li>
-                        <li>Git <span class="skill-stars">★★★★☆</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <!-- Left Column (Contact, Skills, Education) -->
+            <div class="lg:col-span-1 space-y-6">
 
-        <section id="projects">
-            <h3>Featured Projects</h3>
-            <div class="project">
-                <h4>Hybrid LLM-Powered QA Automation Framework</h4>
-                <p><em>mavonic | Jan 2025 - Present</em></p>
-                <h5>Project Overview:</h5>
-                <p>Designed and developed a next-generation QA automation framework that combines Large Language Models (LLMs) with Model Context Protocol (MCP) to streamline browser testing, CI/CD integration, and workflow reusability.</p>
-                
-                <h5>Key Accomplishments & Measurable Outcomes:</h5>
-                <ul>
-                    <li>Built a deterministic automation engine that uses LLMs for one-time prompt-based test creation and MCP for tool call capture and replay.</li>
-                    <li>Integrated Playwright, vision-based reasoning, and a custom MCP client to enable non-technical stakeholders to execute complex browser flows from a simple UI.</li>
-                    <li>Reduced QA execution costs by over 70% - 90% through LLM trace caching and reuse.</li>
-                    <li>Enabled CI/CD-triggered automation with SSE (Server-Sent Events) and agentic workflows for user onboarding, regression, and monitoring.</li>
-                    <li>Designed agent-compatible modular scripts that are version-controlled and human-editable.</li>
-                </ul>
-                
-                <h5>Technologies:</h5>
-                <p>Playwright, Model Context Protocol (MCP), Browser-Use, Mastra, n8n, Flowise, Pydantic, SSE, CI/CD, Claude, GPT-4</p>
+                <!-- Contact -->
+                <section>
+                    <h3 class="section-title text-lg mb-3">Contact</h3>
+                    <div class="text-sm space-y-1 text-gray-700">
+                        <p><strong>Email:</strong> mhaskarakshay1992@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 8898910723</p>
+                        <p><strong>Location:</strong> Mumbai, Maharashtra, India</p>
+                        <p class="flex items-center">
+                            <img src="images/linkedin_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/20x20/0077B5/fff?text=in';" class="logo-img" alt="LinkedIn">
+                            <a href="https://www.linkedin.com/in/akshay-mhaskar-30a003160" target="_blank" class="hover:text-teal-600">LinkedIn Profile</a>
+                        </p>
+                        <p class="flex items-center">
+                             <img src="images/github_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/20x20/181717/fff?text=Gh';" class="logo-img" alt="GitHub">
+                            <a href="https://github.com/CelestialCreator" target="_blank" class="hover:text-teal-600">GitHub Profile</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Technical Skills -->
+                <section>
+                    <h3 class="section-title text-lg mb-3">Technical Skills</h3>
+                    <div class="text-sm space-y-2">
+                        <p><span class="font-semibold text-gray-900">Cloud & Infra:</span> AWS, GCP, Terraform, Terragrunt, CloudFront, Linux</p>
+                        <p><span class="font-semibold text-gray-900">Containerization:</span> Docker, Kubernetes, Helm, ArgoCD</p>
+                        <p><span class="font-semibold text-gray-900">Networking & Security:</span> Traefik, Istio, Trivy, Terrascan, PCI-DSS</p>
+                        <p><span class="font-semibold text-gray-900">Monitoring & Logging:</span> VictoriaMetrics, VictoriaLogs, FluentBit, Grafana, AlertManager, Zenduty</p>
+                        <p><span class="font-semibold text-gray-900">CI/CD & GitOps:</span> Jenkins, Git, ArgoCD, CI/CD Pipelines</p>
+                        <p><span class="font-semibold text-gray-900">Scripting & AI:</span> Python, Shell, Open-Source LLMs/TTS</p>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h3 class="section-title text-lg mb-3">Education</h3>
+                    <div class="text-sm space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Bachelor of Engineering</p>
+                            <p>Electrical, Electronics and Communications Engineering</p>
+                            <p class="text-gray-600">Mumbai University</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Diploma</p>
+                            <p>Electronics and Telecommunications</p>
+                            <p class="text-gray-600">Maharashtra State Board of Technical Education</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section>
+                    <h3 class="section-title text-lg mb-3">Certifications</h3>
+                    <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+                        <li><span class="font-semibold">Elastic Google Cloud Infrastructure: Scaling and Automation</span> <span class="text-gray-600">(Google Cloud)</span> - <a href="https://www.cloudskillsboost.google/public_profiles/e5ca3de5-de5e-4c21-b389-d1482b7a66e1/badges/8250735?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                        <li><span class="font-semibold">DevOps Beginners to Advanced | Decoding DevOps with Projects</span> <span class="text-gray-600">(Udemy)</span> - <a href="https://www.udemy.com/certificate/UC-b5e82cf3-a59a-4fdb-a1f7-5ab9bd5625ab/" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                        <li><span class="font-semibold">Learning ITIL®</span> <span class="text-gray-600">(LinkedIn)</span> - <a href="https://www.linkedin.com/learning/certificates/ce4ae2a56a89936d37c1d1311bcdadf134355ca2482c84a915d5191a18435d7c" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                        <li><span class="font-semibold">IT Services Management: ISO 20000</span> <span class="text-gray-600">(LinkedIn)</span> - <a href="https://www.linkedin.com/learning/certificates/6f6080b6305016f3f62690b1e006000c280a6bf3b20f182004ca750acd264007" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                        <li><span class="font-semibold">Career Essentials in System Administration</span> <span class="text-gray-600">(Microsoft/LinkedIn)</span> - <a href="https://www.linkedin.com/learning/certificates/36740e9a4041088d10011db4d770e98dcb6500ae4973daef082bcbb3fd2379f5" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                        <li><span class="font-semibold">Windows 11: Administration</span> <span class="text-gray-600">(LinkedIn)</span> - <a href="https://www.linkedin.com/learning/certificates/a08b4ba9d5da3bd938ca94ee7655b60f63f9b9e1a32d45f53e6c7b899730735a" target="_blank" class="text-blue-600 hover:underline">View Certificate</a></li>
+                    </ul>
+                </section>
+
             </div>
 
-            <div class="project">
-                <h4>DevOps/Tech Lead – XSquare Payment Services LLC</h4>
-                <p><em>mavonic | Nov 2024 - Present</em></p>
-                <h5>Project Overview:</h5>
-                <p>Led the rearchitecture of an AWS-based infrastructure to achieve full PCI DSS compliance, segregating sensitive card data (Card Data Zone) from non-sensitive operations (No Card Data Zone).</p>
-                
-                <h5>Key Accomplishments & Measurable Outcomes:</h5>
-                <ul>
-                    <li>Infrastructure Restructuring: Implemented multi-tier, segmented architecture using AWS CloudFormation and native services (NAT Gateways, RDS PostgreSQL, VPC Security Groups) for strict access controls.</li>
-                    <li>Security Enhancements: Integrated advanced monitoring and compliance tools (CloudWatch, GuardDuty, Security Hub, AWS Shield Advanced, KMS) for real-time audit logging and threat detection.</li>
-                    <li>Vulnerability Management: Bridged capability gaps with open-source tools like Wazzu for enhanced vulnerability management and security posture.</li>
-                    <li>Data Protection: Established secure API communication channels with end-to-end encryption (in transit and at rest) to protect sensitive payment information.</li>
-                    <li>PCI DSS Compliance: Collaborated cross-functionally to ensure seamless integration with payment gateways and adherence to PCI DSS standards, significantly reducing risk exposure.</li>
-                </ul>
-                
-                <h5>Technologies:</h5>
-                <p>AWS CloudFormation, NAT Gateways, RDS PostgreSQL, VPC Security Groups, CloudWatch, GuardDuty, Security Hub, AWS Shield Advanced, KMS, Wazzu</p>
-                
-                <!-- <h5>Summary:</h5> -->
-                <!-- <p>This project achieved full PCI DSS compliance for payment infrastructure, ensuring robust security and risk mitigation while maintaining operational efficiency.</p> -->
-            </div>
-            <div class="project">
-                <h4>Stashfin Cloud Migration</h4>
-                <p><em>mavonic | Mar 2023 - Nov 2023</em></p>
-                <h5>Project Overview:</h5>
-                <p>Completed the migration of a co-lending platform's infrastructure from AWS to GCP. As a Platform Engineer, I led the migration effort to help the client achieve a cloud-agnostic infrastructure, streamline deployments, and enhance performance—all with quantifiable improvements.</p>
-                
-                <h5>Key Accomplishments & Measurable Outcomes:</h5>
-                <ul>
-                    <li>Infrastructure Migration: Successfully transitioned from AWS to GCP, reducing overall infrastructure downtime by 80% during the migration phase.</li>
-                    <li>CI/CD Pipeline Enhancements: Implemented an automated CI/CD pipeline that cut the build and deployment time by 70% (e.g., reducing average deployment time from 40 minutes to 12 minutes), allowing for more frequent releases.</li>
-                    <li>Meta-Service Chart Introduction: Developed a single Helm-based meta-service chart to deploy all microservices, which decreased manual configuration efforts by 50% and reduced deployment-related errors by 40%.</li>
-                    <li>Service Mesh & API Gateway: Deployed Linkerd 2.0 as the service mesh and Emissary as the API gateway, resulting in a 30% improvement in inter-service communication performance and a measurable reduction in API latency.</li>
-                    <li>Observability and Resiliency: Integrated Prometheus and Grafana for monitoring, and optimized infrastructure with HA Redis, node/pod affinity, and Pod Disruption Budgets (PDB), achieving 99.95% uptime in production and reducing recovery time by 60%.</li>
-                    <li>Security and Cost Optimization: Enforced least privilege permissions and automated CI/CD processes, leading to a 25% reduction in operational costs over the project lifecycle.</li>
-                </ul>
-                
-                <h5>Technologies:</h5>
-                <p>AWS, GCP, Kubernetes (EKS), Helm, Bitbucket, GitLab, Emissary, Linkerd 2.0, Redis, nginx ingress, Prometheus, Grafana</p>
-                
-                <h5>Summary:</h5>
-                <p>This project not only achieved a seamless migration from AWS to GCP but also delivered significant measurable benefits—faster deployments, enhanced performance, improved reliability, and reduced costs. These quantifiable outcomes underscore the value of the migration and the efficiency improvements implemented throughout the process.</p>
-            </div>
-            <div class="project">
-                <h4>Xuno Cross-Border Banking Infrastructure</h4>
-                <p><em>mavonic | Nov 2022 - Feb 2023</em></p>
-                <ul>
-                   <li>Bootstrapped infrastructure in GCP for a cross-border banking startup</li>
-                   <li>Created Private EKS cluster with 3 node pools</li>
-                   <li>Deployed high-availability Redis, MongoDB, and RabbitMQ</li>
-                   <li>Developed Meta-helm chart for efficient deployment of upcoming services</li>
-                   <li>Implemented Emissary for API gateway and Cert-Manager for Let's Encrypt SSL with auto-renewal</li>
-                   <li>Established CI/CD pipeline using Cloud Build and ArgoCD</li>
-                   <li>Set up monitoring with Prometheus and Grafana</li>
-                   <li>Utilized Terragrunt for Infrastructure as Code (IaC)</li>
-                   <li>Documented all steps to enable complete infrastructure recreation from scratch</li>
-               </ul>
-               <p><strong>Technologies:</strong> GCP, Kubernetes (EKS), Redis, MongoDB, RabbitMQ, Helm, Emissary, Cert-Manager, Cloud Build, ArgoCD, Prometheus, Grafana, Terragrunt</p>
-               </div>
-            <div class="project">
-                <h4>Foodstories E-commerce Platform</h4>
-                <p><em>mavonic | May 2023 - Present</em></p>
-                <ul>
-                    <li>Developed Magento-based e-commerce site on GCP EC2</li>
-                    <li>Implemented multi-instance architecture with RabbitMQ and Elasticsearch</li>
-                    <li>Secured with Nginx, Let's Encrypt SSL, and Certbot</li>
-                    <li>Deployed frontend on Vercel</li>
-                    <li>Implemented CI/CD with Cloud Build</li>
-                    <li>Orchestrated Magento on GKE</li>
-                </ul>
-                <p><strong>Technologies:</strong> GCP, Kubernetes (GKE), Terraform, Docker, Nginx, Let's Encrypt, Cloud Build, Magento</p>
-            </div>
-        </section>
+            <!-- Right Column (Experience, Projects) -->
+            <div class="lg:col-span-2 space-y-8">
 
-        <section id="experience">
-            <h3>Professional Experience</h3>
-            <div class="job">
-                <h4>DevOps Engineer</h4>
-                <p><strong><img src="images/mavonic_logo.png" alt="mavonic" class="company-logo"> mavonic</strong> | Apr 2023 - Present</p>
-                <ul>
-                    <li>Maintain cloud infrastructure across AWS, Azure, and GCP</li>
-                    <li>Automate software delivery pipeline</li>
-                    <li>Monitor and optimize system performance</li>
-                    <li>Manage Kubernetes environments and implement Terraform</li>
-                    <li>Lead DevOps best practices and improvements</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h4>System Administrator</h4>
-                <p><strong><img src="images/cupshup_logo.png" alt="CupShup" class="company-logo"> CupShup</strong> | Apr 2021 - Mar 2023</p>
-                <ul>
-                    <li>Managed cloud infrastructure with a focus on GCP and AWS, including Amazon EKS for container orchestration</li>
-                    <li>Deployed and maintained Kubernetes workloads using Helm and GitOps practices </li>
-                    <li>Monitored system performance and implemented logging and alerting for high availability</li>
-                    <li>Managed internal tools including Google Workspace, DNS, and network services</li>
-                    <li>Promoted DevOps culture by standardizing automation, IaC practices (Terraform), and infrastructure governance</li>
-                    <li>Conducted regular security audits and implemented security best practices</li>
-                    <li>Led vendor evaluations, negotiated SaaS/cloud contracts, and optimized licensing costs through cost-benefit analysis</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h4>Co-Owner</h4>
-                <p><strong><img src="images/squareroot_logo.png" alt="Square ROOt Technologies" class="company-logo"> Square ROOt Technologies</strong> | Nov 2018 - Apr 2021</p>
-                <ul>
-                    <li>Aligned IT strategies with business goals</li>
-                    <li>Developed long-term IT plans and strategies</li>
-                    <li>Development of autonomous drones for surveillance and agriculture</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h4>Technical Support Specialist</h4>
-                <p><strong><img src="images/sndt_logo.png" alt="SNDT Women's University" class="company-logo"> SNDT Women's University</strong> | Feb 2017 - Nov 2017</p>
-                <ul>
-                    <li>Administered Windows servers and network infrastructure</li>
-                    <li>Managed firewalls and handled IT service requests</li>
-                    <li>Implemented disaster recovery procedures</li>
-                </ul>
-            </div>
-        </section>
+                <!-- Work Experience -->
+                <section>
+                    <h3 class="section-title text-xl mb-4">Work Experience</h3>
 
-        <section id="education">
-            <h3>Education & Certifications</h3>
-            <div class="education-grid">
-                <div class="education-section">
-                    <h4>Education</h4>
-                    <ul>
-                        <li><strong>Bachelor of Engineering - BE</strong>, Electrical, Electronics and Communications Engineering<br><em>Mumbai University, Mumbai</em></li>
-                        <li><strong>Diploma</strong>, Electronics and Telecommunications<br><em>Maharashtra State Board of Technical Education</em></li>
-                    </ul>
-                </div>
-                <div class="education-section">
-                    <h4>Certifications</h4>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/learning/certificates/ce4ae2a56a89936d37c1d1311bcdadf134355ca2482c84a915d5191a18435d7c" target="_blank">Learning ITIL®</a> - LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/6f6080b6305016f3f62690b1e006000c280a6bf3b20f182004ca750acd264007" target="_blank">IT Services Management: ISO 20000</a> - LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/a08b4ba9d5da3bd938ca94ee7655b60f63f9b9e1a32d45f53e6c7b899730735a" target="_blank">Windows 11: Administration</a> - LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/36740e9a4041088d10011db4d770e98dcb6500ae4973daef082bcbb3fd2379f5" target="_blank">Career Essentials in System Administration</a> - Microsoft and LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/6d2c787418dda6825c106655444c40cc9debcdb6e56d5ed55836651bae405517" target="_blank">macOS for IT Administrators</a> - LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/1e6c0cddcb1b1d31ba7deab9d63355438fe1bf8b7b1c9bccfca4edaab7cc8a78" target="_blank">Microsoft 365 Essential Training for Administrators</a> - LinkedIn</li>
-                        <li><a href="https://www.linkedin.com/learning/certificates/ca0bacde42ab6d57f21671918f67c7e1889aceefeeb4866eac5dd834cd964f81" target="_blank">Kubernetes Essential Training: Application Development</a> - LinkedIn</li>
-                        <li><a href="https://www.udemy.com/certificate/UC-b5e82cf3-a59a-4fdb-a1f7-5ab9bd5625ab" target="_blank">DevOps Beginners to Advanced | Decoding DevOps with Projects</a> - Udemy</li>
-                    </ul>
-                </div>
+                    <!-- Billeasy -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-lg font-bold flex items-center">
+                                <img src="images/billeasy.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/2b3a55/fff?text=B';" class="logo-img max-h-6" alt="Billeasy Logo">
+                                DevOps Engineer (Sole Contributor) at Billeasy
+                            </h4>
+                            <span class="text-sm text-gray-500">Jul 2025 – Present | Hybrid</span>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1.5">
+                            <li><span class="font-semibold text-teal-700">Scaled and secured infrastructure</span> supporting <span class="font-semibold">high-volume Metro Ticketing traffic</span>, ensuring zero downtime and robust performance during peak periods.</li>
+                            <li><span class="font-semibold text-teal-700">Drove 80% reduction in monthly egress costs</span> by strategically replacing AWS Ingress with <span class="font-semibold">Traefik Gateway</span> deployed behind <span class="font-semibold">CloudFront</span>.</li>
+                            <li><span class="font-semibold text-teal-700">Led GitOps transformation</span> by implementing <span class="font-semibold">ArgoCD</span>, drastically reducing configuration drift and improving the auditability of infrastructure changes.</li>
+                            <li><span class="font-semibold text-teal-700">Established a comprehensive, modern observability stack</span> (<span class="font-semibold">VictoriaMetrics, VictoriaLogs, FluentBit, Grafana, AlertManager</span>), integrating notifications (Slack) and escalations (Zenduty).</li>
+                            <li>Developed an <span class="font-semibold">AI-powered Log Agent</span> to parse and analyze logs from VictoriaLogs, streamlining developer troubleshooting and reducing MTTR.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Mavonic Technology -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-lg font-bold flex items-center">
+                                <img src="images/mavonic_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/FF6600/fff?text=M';" class="logo-img max-h-6" alt="Mavonic Logo">
+                                DevOps Engineer at Mavonic Technology Private Limited
+                            </h4>
+                            <span class="text-sm text-gray-500">Apr 2023 – Jul 2025 | Hybrid</span>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1.5">
+                            <li>Architected scalable cloud infrastructures for high-performance Fintech and AI-driven platforms, ensuring rapid deployment and operational resilience.</li>
+                            <li>Streamlined CI/CD pipelines with integrated security and compliance checks, enabling faster, audit-ready deployments across regulated fintech environments.</li>
+                            <li>Engineered infrastructure-as-code frameworks using Terraform and Terragrunt, enabling modular, version-controlled, and reproducible environments.</li>
+                            <li>Orchestrated Kubernetes clusters for containerized workloads, enhancing system scalability, fault tolerance, and automated recovery.</li>
+                            <li>Fortified cloud environments with robust security controls and automated compliance policies aligned with PCI-DSS and industry standards.</li>
+                            <li>Devised a hybrid LLM-powered QA framework using Playwright and Model Context Protocol, enabling 70–90% cost savings and CI/CD-integrated browser testing with reusable, agent-compatible workflows.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cupshup -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-lg font-bold flex items-center">
+                                <img src="images/cupshup_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/505050/fff?text=C';" class="logo-img max-h-6" alt="Cupshup Logo">
+                                System Administrator at Cupshup
+                            </h4>
+                            <span class="text-sm text-gray-500">Apr 2021 – Feb 2023</span>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1.5">
+                            <li>Managed IT infrastructure and systems for a growing marketing company.</li>
+                            <li>Implemented cloud-based solutions for business operations, managed Google Workspace and network infrastructure.</li>
+                            <li>Conducted cost-benefit analyses and managed software licenses.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Square Root Consultancy -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-lg font-bold flex items-center">
+                                <img src="images/squareroot_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/333333/fff?text=SQ';" class="logo-img max-h-6" alt="Square Root Logo">
+                                Founder at Square Root Consultancy
+                            </h4>
+                            <span class="text-sm text-gray-500">Nov 2018 – Apr 2021</span>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1.5">
+                            <li>Aligned IT strategies with business goals.</li>
+                            <li>Developed long-term IT plans and strategies.</li>
+                            <li>Development of autonomous drones for surveillance and agriculture.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SNDT Women's University -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-lg font-bold flex items-center">
+                                <img src="images/sndt_logo.png" onerror="this.onerror=null;this.src='https://placehold.co/24x24/000080/fff?text=SNDT';" class="logo-img max-h-6" alt="SNDT Logo">
+                                Technical Support Specialist at SNDT Women's University
+                            </h4>
+                            <span class="text-sm text-gray-500">Feb 2017 – Nov 2017</span>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1.5">
+                            <li>Administered Windows servers and network infrastructure, ensuring high availability and performance for academic systems.</li>
+                            <li>Managed firewalls and efficiently handled IT service requests, improving resolution times.</li>
+                            <li>Implemented disaster recovery procedures to safeguard critical university data and ensure business continuity.</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <!-- Featured Projects -->
+                <section>
+                    <h3 class="section-title text-xl mb-4">Featured Projects</h3>
+
+                    <!-- AI Voice Agent Project -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-md bg-teal-50">
+                        <h4 class="text-lg font-bold text-teal-700 mb-1">AI-Powered Multi-Channel Voice Agent</h4>
+                        <p class="text-sm text-gray-700 mb-2">A self-deployed, open-source LLM/TTS solution for dynamic telephony and chat interactions.</p>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1">
+                            <li><span class="font-semibold">Full-Stack AI Deployment:</span> Built and hosted AI agents using open-source LLMs and TTS models on an <span class="font-semibold">on-premise Kubernetes cluster</span>.</li>
+                            <li><span class="font-semibold">Multi-Channel Integration:</span> Integrated the agent with both <span class="font-semibold">SIP Trunking</span> for direct voice calls and the <span class="font-semibold">WhatsApp Calling API</span> for comprehensive conversational reach.</li>
+                            <li><span class="font-semibold">Versatile Use Cases:</span> Designed for tasks including automated job interviews, order processing, and first-line customer support/triage.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Secure Cloud Infrastructure for NBFC -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-md">
+                        <h4 class="text-lg font-bold mb-1 text-teal-700">Secure Cloud Infrastructure for NBFC Co-Lending Platform</h4>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1">
+                            <li><span class="font-semibold">Cloud Migration & Security:</span> Architected and deployed a secure, scalable cloud infrastructure for an NBFC co-lending platform.</li>
+                            <li>Designed multi-tenant architecture with <span class="font-semibold">strong isolation</span> to enable secure collaboration between financial institutions while maintaining strict data isolation.</li>
+                            <li>Implemented <span class="font-semibold">Infrastructure as Code (IaC)</span> using Terraform and established a Kubernetes-based microservices architecture.</li>
+                        </ul>
+                    </div>
+
+                    <!-- PCI-DSS Compliance Project -->
+                    <div class="mb-5 p-4 border border-gray-100 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold mb-1">PCI-DSS Implementation for Payment Processing</h4>
+                        <ul class="list-disc ml-5 text-gray-700 text-sm space-y-1">
+                            <li>Designed and implemented a comprehensive <span class="font-semibold">PCI-DSS compliant infrastructure</span>, including secure network segmentation and strong access controls.</li>
+                            <li>Deployed encryption for data at rest and in transit, and established automated vulnerability scanning with <span class="font-semibold">Trivy</span>.</li>
+                        </ul>
+                    </div>
+
+                </section>
+
             </div>
-        </section>
+        </main>
     </div>
-<script src="script.js"></script>
+
+    <script>
+        // Function to handle PDF download with better image handling
+        function downloadPDF() {
+            // Ensure all images are loaded before attempting to print
+            const images = document.querySelectorAll('img');
+            let loadedImages = 0;
+            const totalImages = images.length;
+
+            if (totalImages === 0) {
+                // If no images, proceed directly to print
+                window.print();
+                return;
+            }
+
+            images.forEach(img => {
+                if (img.complete) {
+                    loadedImages++;
+                } else {
+                    img.addEventListener('load', () => {
+                        loadedImages++;
+                        if (loadedImages === totalImages) {
+                            window.print();
+                        }
+                    });
+                    img.addEventListener('error', () => {
+                        loadedImages++;
+                        if (loadedImages === totalImages) {
+                            window.print();
+                        }
+                    });
+                }
+            });
+
+            // If all images are already loaded, print immediately
+            if (loadedImages === totalImages) {
+                window.print();
+            }
+        }
+
+        // Add click event to the download button
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadBtn = document.querySelector('.print-hidden button');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    downloadPDF();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
